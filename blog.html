@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Umanhonlen Gabriel</title>
+  <meta name="description" content="Security research, write-ups and analysis from Umanhonlen Gabriel — penetration testing, cybercrime research and responsible disclosure." />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>document.documentElement.classList.add('dyn');</script>
+</head>
+<body>
+  <div class="bg-blobs" aria-hidden="true"><i class="b1"></i><i class="b2"></i><i class="b3"></i><i class="b4"></i></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav">
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html#hero" data-i18n="nav_home">Home</a></li>
+          <li><a href="index.html#about" data-i18n="nav_about">About</a></li>
+          <li><a href="index.html#services" data-i18n="nav_services">Services</a></li>
+          <li><a href="blog.html" class="active" data-i18n="nav_blog">Blog</a></li>
+          <li><a href="index.html#contact" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-cta">
+        <div class="lang-switch">
+          <button class="lang-btn" id="langBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Change language">
+            <svg class="globe-ico" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.6 2.7 4 5.8 4 9s-1.4 6.3-4 9c-2.6-2.7-4-5.8-4-9s1.4-6.3 4-9z"/></svg>
+            <span class="lang-code">EN</span>
+          </button>
+          <ul class="lang-menu" id="langMenu">
+            <li><button type="button" data-lang="en" class="active">English</button></li>
+            <li><button type="button" data-lang="fr">Français</button></li>
+          </ul>
+        </div>
+        <a class="btn btn-accent" href="index.html#contact" data-i18n="cta_book">Book a Consultation</a>
+        <button class="nav-toggle" aria-label="Toggle menu" data-i18n="nav_menu">Menu</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Blog hero -->
+  <section class="blog-hero">
+    <div class="container">
+      <div class="eyebrow" data-i18n="blog_eyebrow">Blog</div>
+      <h1 data-i18n="blog_title" data-reveal>Security research &amp; disclosure notes</h1>
+      <p class="lead muted" style="margin-top: 14px; max-width: 48ch" data-i18n="blog_sub">
+        Write-ups, methodology and analysis from live engagements and published research.
+      </p>
+    </div>
+  </section>
+
+  <!-- Blog -->
+  <section style="padding-top: 0">
+    <div class="container">
+      <div class="post-list rv-stagger" id="postList"></div>
+      <p class="empty-state hidden" id="emptyState" data-i18n="blog_empty">No posts yet.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <strong data-i18n="foot_pages">Pages</strong>
+          <ul>
+            <li><a href="index.html#hero" data-i18n="nav_home">Home</a></li>
+            <li><a href="index.html#services" data-i18n="nav_services">Services</a></li>
+            <li><a href="index.html#stats" data-i18n="nav_stats">Statistics</a></li>
+            <li><a href="blog.html" data-i18n="nav_blog">Blog</a></li>
+            <li><a href="index.html#contact" data-i18n="nav_contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <strong data-i18n="foot_services">Services</strong>
+          <ul>
+            <li><a href="index.html#services" data-i18n="fs1">Penetration Testing</a></li>
+            <li><a href="index.html#services" data-i18n="fs2">Secure Code Review</a></li>
+            <li><a href="index.html#services" data-i18n="fs3">Vulnerability Management</a></li>
+            <li><a href="index.html#services" data-i18n="fs4">Mentorship</a></li>
+            <li><a href="index.html#services" data-i18n="fs5">Consultation</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <strong data-i18n="foot_legal">Legal</strong>
+          <ul>
+            <li><a href="privacy.html" data-i18n="foot_pp">Privacy Policy</a></li>
+            <li><a href="terms.html" data-i18n="foot_tos">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2025 Umanhonlen Gabriel <span data-i18n="foot_rights">All rights reserved.</span></span>
+        <span data-i18n="foot_tag">Offensive security — responsible disclosure.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+    // ---------- State ----------
+    const STORE_KEY = 'ug_blog_posts_v3';
+
+    const seedPosts = [
+      {
+        title: 'When Identity Breaks! How a Single Parameter Corrupted an Authentication System',
+        tag: 'Responsible Disclosure',
+        date: '2026-05-30',
+        cover: 'https://miro.medium.com/v2/resize:fit:600/0*0pfTtwqmGQUKKE7T.jpg',
+        excerpt: 'Business logic flaws live outside strict patterns — here a client-controlled "resetPassword" flag corrupted identity state after OTP verification.',
+        content: '# The Setup\n\nDuring the email login flow the OTP request contained a parameter that drew my attention:\n\n    { "email": "user@example.com", "code": "OTP", "resetPassword": false }\n\nI modified it to "resetPassword": true and intercepted the response. No privilege escalation, no account takeover — but the system entered an inconsistent state: existing projects disappeared, dashboards reset, and the same email was suddenly treated as a new registration.\n\n## Root cause\n\n* Trusting client-controlled state — "resetPassword" influenced authentication flow decisions.\n* No server-side state enforcement — after OTP verification, identity resolution depended on mutable, untrusted inputs.\n\n## Real impact\n\nExisting users were treated as new registrations, the same email could exist as multiple account entities, and password recovery failed even with a valid OTP ("Invalid verification code"). Identity itself became unreliable — and everything built on it (auth, authorization, recovery, audit logging) became unreliable too.\n\nThe vendor marked it ineligible for a bounty as "self-inflicted state corruption" (the attacker needs the victim\u2019s own OTP). But the point isn\u2019t attacking other users — it\u2019s that identity consistency broke. State integrity is the foundation of security.\n\nRead the full article on [Medium](https://medium.com/@sudosu01/when-identity-breaks-how-a-single-parameter-corrupted-an-authentication-system-8d41549e1365)'
+      },
+      {
+        title: 'When Favoriting Goes Rogue: Broken Access Control Flaw',
+        tag: 'Responsible Disclosure',
+        date: '2026-04-08',
+        cover: 'https://image.thum.io/get/width/800/https://infosecwriteups.com/when-favoriting-goes-rogue-broken-access-control-flaw-088c224ea2fe',
+        excerpt: 'Clicking buttons like every curious bug bounty hunter does — and landing on a broken access control flaw.',
+        content: `The story of a broken access control bug found while exploring a platform\u2019s favoriting features. What starts as casual poking around ("clicking buttons purely for research purposes") ends with a reproducible authorization flaw worth reporting.\n\nFull write-up on [Medium](https://medium.com/@sudosu01/when-favoriting-goes-rogue-broken-access-control-flaw-%EF%B8%8F-088c224ea2fe)`
+      },
+      {
+        title: 'The €400 Bug - VPN/Geo Location Bypass',
+        tag: 'Responsible Disclosure',
+        date: '2026-01-10',
+        cover: 'https://miro.medium.com/v2/resize:fit:640/1*MjotlWRLYBXce1M3-njHaQ.jpeg',
+        excerpt: 'Bypassing a geo-restriction on a private bug bounty program target — and getting paid for it.',
+        content: `While hunting on a private program, I approached the target the way I always do — like a hunter. The platform enforced geo-location restrictions, so I set out to bypass the VPN/geo detection.\n\n## Key steps\n\n* Mapped how the platform detected location (IP-based checks on sensitive endpoints)\n* Found the application only enforced the location check at certain layers\n* Worked around the restriction using alternate entry points and modified requests\n* Reported with a clear reproduction path\n\nThe finding was validated and rewarded with a €400 bounty.\n\nFull write-up on [InfoSec Write-ups](https://infosecwriteups.com/the-400-bug-vpn-geo-location-bypass-0e9a6d26dd37)`
+      },
+      {
+        title: 'How I Discovered an IDOR Vulnerability in a Parent/Child Management API',
+        tag: 'Responsible Disclosure',
+        date: '2025-11-26',
+        cover: 'https://miro.medium.com/v2/resize:fit:1200/0*O-PVYluMAOqd7H6o.png',
+        excerpt: 'Insecure Direct Object Reference on a children endpoint — accessing other users\u2019 child records by swapping IDs.',
+        content: `In this write-up I share how I found an IDOR in the *children* endpoint of a parent/child management API.\n\nThe API returned sensitive records keyed directly on object identifiers supplied by the client. By enumerating and substituting the identifier of another user\u2019s child record into my own request, the API returned data I was not authorized to see.\n\n## Takeaways\n\n* Always test object-reference endpoints for cross-tenant access\n* IDs in APIs should be scoped to the authenticated user server-side\n* Authorization checks must be enforced per-resource, not per-endpoint\n\nFull write-up on [InfoSec Write-ups](https://infosecwriteups.com/how-i-discovered-an-idor-vulnerability-in-a-parent-child-management-api-445c9471d23b)`
+      },
+      {
+        title: 'Information Disclosure: Hardcoded Encryption Keys in an Android App',
+        tag: 'Research',
+        date: '2025-11-10',
+        cover: 'https://miro.medium.com/v2/da:true/bc1f8416df0cad099e43cda2872716e5864f18a73bda2a7547ea082aca9b5632',
+        excerpt: 'Static analysis of the Sogexia Android app revealed AES keys hardcoded in Flutter\u2019s encryption_helper.dart.',
+        content: `During a routine security assessment of the **Sogexia Android application** (SDK 35, Max SDK 32), static analysis and reverse engineering of the Flutter APK revealed an "encryption_helper.dart" file containing Base64-encoded and plaintext cryptographic material — sequences resembling AES keys embedded directly in app logic.\n\nThe keys should be managed dynamically, not shipped in the binary. The vendor fixed it in version 36 by refactoring key management (likely secure key derivation or remote key exchange).\n\n## Lesson for Flutter developers\n\nEnsure encryption_helper.dart-type libraries are updated — NEVER hardcode encryption keys in client-side code. Any key shipped in an APK can be extracted trivially.\n\nFull write-up on [Medium](https://medium.com/@sudosu01/information-disclosure-hardcoded-encryption-keys-fc375abf68a3)`
+      },
+      {
+        title: 'From Low to Medium - How a Simple Email Injection Earned Me Some $$$',
+        tag: 'Responsible Disclosure',
+        date: '2025-10-14',
+        cover: 'https://miro.medium.com/v2/resize:fit:1200/1*fs5FEo2u3GfVyO0Bh4uIjw.png',
+        excerpt: 'Bypassing email-uniqueness restrictions during account creation via email formatting manipulation.',
+        content: `A cool business logic flaw. On the target, I discovered users could bypass the email-uniqueness restriction during account creation by manipulating email formatting (dots, character addressing, etc.).\n\n## The flow\n\n1. **Registration page**: unwhitelisted email blocked, whitelisted email accepted\n2. **"Email not received" flow**: the system validated the email again — but here the unwhitelisted format was accepted, and a confirmation email was sent\n\nThe inconsistent validation between two endpoints meant the original restriction could be silently bypassed.\n\n## Tips\n\nBug bounties require patience and careful understanding of how an application works. Always check for inconsistent validation or normalization across different endpoints.\n\nFull write-up on [InfoSec Write-ups](https://infosecwriteups.com/from-low-to-medium-how-a-simple-email-injection-earned-me-some-3e7630ae4e9c)`
+      },
+      {
+        title: 'Business Logic Error - Bypassing Payment with Test Cards',
+        tag: 'Responsible Disclosure',
+        date: '2025-10-09',
+        cover: 'https://image.thum.io/get/width/800/https://medium.com/buggybuggy/business-logic-error-bypassing-payment-with-test-cards-77c6e3c36f16',
+        excerpt: 'Business logic bugs are sneaky — using an app exactly as intended, but in a way the designers never expected.',
+        content: `Business logic bugs are not about crashing servers or SQL injection — they\u2019re about using an app **exactly as intended, but in a way that breaks the intended rules**. This write-up covers how a payment flow could be bypassed using test cards, triggering a "paid" state without a real transaction.\n\n## Lesson\n\nAlways test payment flows with provider test cards and examine the server-side state transitions — validation on the client or the payment provider\u2019s sandbox mode can be abused if the backend trusts them.\n\nFull write-up on [InfoSec Write-ups](https://medium.com/buggybuggy/business-logic-error-bypassing-payment-with-test-cards-77c6e3c36f16)`
+      },
+      {
+        title: 'How I Found Broken Access Control - Then I Stopped Hunting',
+        tag: 'Responsible Disclosure',
+        date: '2025-09-05',
+        cover: 'https://miro.medium.com/v2/da:true/resize:fit:498/0*VN31kTzMlXSURaLr.gif',
+        excerpt: 'Cache deception and a contact ID swap on a cryptocurrency platform — and why triage communication matters.',
+        content: `I picked up a cryptocurrency platform subdomain (xyz.REDACTED.net) and observed how it worked before registering.\n\n* Found a cached endpoint via the network tab (cache deception potential) — but a session check blocked reuse\n* Documented it and kept moving\n* Noticed the contact-creation feature and swapped a contact ID from my account into another user\u2019s request\n\nThe result: cross-user access to contacts — a real broken access control flaw. I reported immediately and was told it was a **duplicate**; the fix was still in the pipeline and the first reporter had already been awarded.\n\nI was happy about the finding, but the experience made me leave the platform. Bug bounty hunting can be frustrating — most triagers get you annoyed, but the skills stay with you. Keep hunting until the big win.\n\nFull write-up on [InfoSec Write-ups](https://infosecwriteups.com/how-i-found-broken-access-control-then-i-stopped-hunting-a48187e8702a)`
+      },
+      {
+        title: 'How I Found a JWT Token Vulnerability that Led to Full Account Takeover',
+        tag: 'Responsible Disclosure',
+        date: '2025-06-16',
+        cover: 'https://miro.medium.com/v2/resize:fit:564/1*00EGffg0J01t2FKRQK5ohg.png',
+        excerpt: 'JWT tokens found in URLs during a HackerOne test — a broken authentication chain that led to full account takeover.',
+        content: `While testing example.com via HackerOne, I found a critical flaw involving **JWT tokens in URLs**. The unprotected exposure of the token in a link parameter meant that the token could be replayed or leaked (e.g., via referrer headers, history, or logs) — and combined with the app accepting it, it granted full account takeover.\n\n## How to prevent it\n\n* Never place session tokens in URLs — use secure cookies or Authorization headers\n* Bind JWTs to the session/user (audience, subject, jti)\n* Rotate tokens and invalidate on password change\n\nFull write-up on [InfoSec Write-ups](https://infosecwriteups.com/how-i-found-a-jwt-token-vulnerability-that-led-to-full-account-takeover-a2b6385b7c5c)`
+      },
+      {
+        title: 'How I Found SSTI in a Search Bar',
+        tag: 'Responsible Disclosure',
+        date: '2025-05-12',
+        cover: 'https://miro.medium.com/v2/resize:fit:428/1*uQ_2zCGYaYI1gpcfaLi1qg.png',
+        excerpt: 'A casually poked search bar evaluated server-side template expressions — classic Server-Side Template Injection.',
+        content: 'While casually poking around a website, I stumbled upon **Server-Side Template Injection (SSTI)** through the search functionality.\n\n## Recon\n\nVisit the site and inspect the search input — here it was sent as a GET parameter (?s=query).\n\n## Testing for SSTI\n\nCommon payloads: ${7*7}, <%= 7*7 %>, {{config}}, {{7*7}}. Most returned either nothing or the input as-is.\n\nThen I tried {{7*7}} — the response read "Results found for: 49". {{8*8}} encoded as %7B%7B8%2A8%7D%7D returned "Results found for: 64".\n\nThe server was evaluating expressions — confirmed SSTI.\n\n## Keep testing for\n\n* Which template syntax works ({{...}} vs ${...})\n* Whether the expression gets evaluated server-side\n* Potential for RCE depending on engine (Jinja2, Twig, etc.)\n* Misconfigurations that expose data via template access\n\nIf you find this, always responsibly disclose it.\n\nFull write-up on [InfoSec Write-ups](https://medium.com/bugbountywriteup/how-i-found-ssti-in-a-search-bar-6fede0d3263c)'
+      },
+      {
+        title: 'The privacy implications of accepting website cookies',
+        tag: 'Privacy',
+        date: '2025-03-18',
+        cover: 'https://cdn.businessday.ng/wp-content/uploads/2025/05/website-cookies.png',
+        excerpt: 'Cookies are small text files that websites store to remember information about you — but acceptance has real privacy consequences.',
+        content: 'This article appeared in Businessday NG Technology. Cookie banners are everywhere, yet most users accept them without reading what data is being collected, how long it is retained, and who it is shared with. This piece breaks down the privacy implications of accepting website cookies, the regulatory context, and what consent actually means in practice.\n\nExternal link: https://businessday.ng/technology/article/here-are-privacy-implications-of-accepting-website-cookies/'
+      },
+      {
+        title: 'The impact of Bitcoin cybercrime on the financial system',
+        tag: 'Research',
+        date: '2025-02-10',
+        cover: 'https://image.thum.io/get/width/800/https://www.irejournals.com/paper-details/1706314',
+        excerpt: 'Peer-reviewed analysis of crypto mining and criminological behavioral threats to modern finance. IRE Journals.',
+        content: 'Research Paper I — published in IRE Journals. This paper analyzes how Bitcoin and crypto mining technologies have created new vectors for financial crime, and the behavioral threat models that accompany them. It contributes to the broader conversation on regulating decentralized financial systems.\n\nExternal link: https://www.irejournals.com/paper-details/1706314'
+      },
+      {
+        title: 'AI integrity at stake as advanced models reshape cybersecurity',
+        tag: 'AI Security',
+        date: '2025-01-22',
+        cover: 'https://cdn.businessday.ng/2022/01/cyberattack-.png',
+        excerpt: 'New AI models offer unprecedented defensive capability while raising concerns about their misuse in cyberattacks.',
+        content: 'Business Day analysis: the same AI models that improve detection and response also lower the barrier to entry for sophisticated attacks — phishing generation, mapping bug chains, and automating discovery. Securing AI requires auditing model behavior the same way we audit application code.\n\nExternal link: https://businessday.ng/technology/article/ai-integrity-at-stake-as-advanced-models-reshapes-cybersecurity/'
+      }
+    ];
+
+    // ---------- Storage helpers ----------
+    function loadPosts() {
+      const raw = localStorage.getItem(STORE_KEY);
+      if (!raw) {
+        localStorage.setItem(STORE_KEY, JSON.stringify(seedPosts));
+        return seedPosts;
+      }
+      try { return JSON.parse(raw); } catch { return seedPosts; }
+    }
+
+    function savePosts(posts) {
+      localStorage.setItem(STORE_KEY, JSON.stringify(posts));
+      renderPosts();
+    }
+
+    // ---------- Rendering ----------
+    function renderPosts() {
+      const list = document.getElementById('postList');
+      const empty = document.getElementById('emptyState');
+      const posts = loadPosts().slice().sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+      list.innerHTML = '';
+      if (!posts.length) { empty.classList.remove('hidden'); return; }
+      empty.classList.add('hidden');
+      posts.forEach(p => {
+        const card = document.createElement('article');
+        card.className = 'post-card';
+        const cover = p.cover
+          ? '<div class="post-cover"><img src="' + p.cover + '" alt="' + escapeHtml(p.title) + '" /></div>'
+          : '<div class="post-cover">' + (p.tag || 'POST').toUpperCase() + '</div>';
+        card.innerHTML =
+          cover +
+          '<div class="post-body">' +
+            '<span class="post-meta">' + escapeHtml(p.tag || 'Post') + '</span>' +
+            '<div class="post-title">' + escapeHtml(p.title) + '</div>' +
+            '<p class="post-excerpt">' + escapeHtml(p.excerpt || '') + '</p>' +
+            '<button class="post-read">' + T('about_more') + '</button>' +
+            '<div class="post-full">' + renderContent(p.content || '') + '</div>' +
+          '</div>';
+        card.querySelector('.post-read').addEventListener('click', () => {
+          card.classList.toggle('open');
+          card.querySelector('.post-read').textContent = card.classList.contains('open') ? T('about_less') : T('about_more');
+        });
+        list.appendChild(card);
+      });
+    }
+
+    function escapeHtml(s) {
+      return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    }
+
+    // Minimal markdown-to-html (headings, bold, italics, links, code)
+    function renderContent(md) {
+      return String(md)
+        .replace(/^### (.*)$/gm, '<h3>$1</h3>')
+        .replace(/^## (.*)$/gm, '<h2>$1</h2>')
+        .replace(/^# (.*)$/gm, '<h1>$1</h1>')
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*(.*?)\*/g, '<em>$1</em>')
+        .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
+        .replace(/`([^`]+)`/g, '<code>$1</code>');
+    }
+
+    // ---------- Nav toggle (mobile) ----------
+    document.querySelector('.nav-toggle').addEventListener('click', () => {
+      document.getElementById('navMenu').classList.toggle('open');
+    });
+
+    const T = k => (window.UGT ? window.UGT(k) : ({ about_more: 'Read more', about_less: 'Show less' }[k] || k));
+
+    window.__onIntLangChange = () => {
+      document.querySelectorAll('.post-read').forEach(btn => {
+        const card = btn.closest('.post-card');
+        btn.textContent = card && card.classList.contains('open') ? T('about_less') : T('about_more');
+      });
+    };
+
+    renderPosts();
+  })();
+
+  // ---------- Copy protection ----------
+  ['contextmenu', 'copy', 'cut', 'selectstart', 'dragstart'].forEach(evt =>
+    document.addEventListener(evt, e => e.preventDefault())
+  );
+  </script>
+  <script src="js/i18n.js"></script>
+  <script src="js/guard.js"></script>
+  <script src="js/dynamic.js"></script>
+</body>
+</html>

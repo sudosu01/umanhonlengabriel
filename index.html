@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Umanhonlen Gabriel | Offensive Security Consulting</title>
+  <meta name="description" content="Penetration testing, secure code review, vulnerability management and security research. Find vulnerabilities before attackers do." />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>document.documentElement.classList.add('dyn');</script>
+</head>
+<body>
+  <div class="bg-blobs" aria-hidden="true"><i class="b1"></i><i class="b2"></i><i class="b3"></i><i class="b4"></i></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav">
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#hero" data-i18n="nav_home">Home</a></li>
+          <li><a href="#about" data-i18n="nav_about">About</a></li>
+          <li><a href="#services" data-i18n="nav_services">Services</a></li>
+          <li><a href="blog.html" data-i18n="nav_blog">Blog</a></li>
+          <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-cta">
+        <div class="lang-switch">
+          <button class="lang-btn" id="langBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Change language">
+            <svg class="globe-ico" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.6 2.7 4 5.8 4 9s-1.4 6.3-4 9c-2.6-2.7-4-5.8-4-9s1.4-6.3 4-9z"/></svg>
+            <span class="lang-code">EN</span>
+          </button>
+          <ul class="lang-menu" id="langMenu">
+            <li><button type="button" data-lang="en" class="active">English</button></li>
+            <li><button type="button" data-lang="fr">Français</button></li>
+          </ul>
+        </div>
+        <a class="btn btn-accent" href="#contact" data-i18n="cta_book">Book a Consultation</a>
+        <button class="nav-toggle" aria-label="Toggle menu" data-i18n="nav_menu">Menu</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero" class="hero">
+    <div class="hero-scene" aria-hidden="true">
+      <i class="hb-beam b1"></i>
+      <i class="hb-beam b2"></i>
+      <i class="hb-pulse p1"></i>
+      <i class="hb-pulse p2"></i>
+      <i class="hb-grid"></i>
+    </div>
+    <div class="container">
+      <div class="eyebrow" data-i18n="hero_eyebrow">Offensive Security</div>
+      <h1 data-i18n="hero_title">Umanhonlen Gabriel</h1>
+      <h2 data-i18n="hero_sub">You are the strength behind the system.</h2>
+      <div class="hero-actions">
+        <a class="btn btn-accent" href="#contact" data-i18n="cta_book">Book a Consultation</a>
+        <a class="btn btn-ghost" href="https://calendly.com/umanhonlengabriel" target="_blank" rel="noopener" data-i18n="cta_schedule">Schedule a Consult</a>
+      </div>
+      <div class="kpi-band">
+        <div class="kpi"><b>70+</b><span data-i18n="kpi1">Security Audits Delivered</span></div>
+        <div class="kpi"><b>98%</b><span data-i18n="kpi2">Client Success Rate</span></div>
+        <div class="kpi"><b>10+</b><span data-i18n="kpi3">Enterprise Clients</span></div>
+        <div class="kpi"><b>24/7</b><span data-i18n="kpi4">Support &amp; Retesting</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hall of Fame -->
+  <div class="trusted">
+    <div class="container">
+      <p class="trusted-label" data-i18n="hof_label">Hall of Fame</p>
+    </div>
+    <div class="logo-marquee hof-marquee" aria-label="Hall of Fame organizations">
+      <div class="logo-track">
+        <div class="logo-row">
+          <a class="hof-chip" href="https://www.zetes.com/en/responsible-disclosure-policy" target="_blank" rel="noopener" title="Zetes — Hall of Fame">
+            <img src="https://icons.duckduckgo.com/ip3/zetes.com.ico" alt="Zetes logo" loading="lazy" />
+            <span><b>Zetes</b><em data-i18n="hof_zetes">Identified a critical issue, guided fast remediation</em></span>
+          </a>
+          <a class="hof-chip" href="https://msrc.microsoft.com/update-guide/acknowledgement/online" target="_blank" rel="noopener" title="Microsoft — Hall of Fame">
+            <img src="https://www.google.com/s2/favicons?domain=microsoft.com&sz=128" onerror="this.onerror=null;this.src='https://icons.duckduckgo.com/ip3/microsoft.com.ico'" alt="Microsoft logo" loading="lazy" />
+            <span><b>Microsoft</b><em data-i18n="hof_ms">Critical vulnerability reported and validated</em></span>
+          </a>
+          <a class="hof-chip" href="https://gbtwente.nl/responsible-disclosure" target="_blank" rel="noopener" title="GBTwente — Hall of Fame">
+            <img src="https://www.google.com/s2/favicons?domain=gbtwente.nl&sz=128" onerror="this.onerror=null;this.src='https://icons.duckduckgo.com/ip3/gbtwente.nl.ico'" alt="GBTwente logo" loading="lazy" />
+            <span><b>GBTwente</b><em data-i18n="hof_gb">Found a vulnerability, guided remediation</em></span>
+          </a>
+          <a class="hof-chip" href="https://support.apple.com/en-us/102774" target="_blank" rel="noopener" title="Apple — Hall of Fame">
+            <img src="https://www.google.com/s2/favicons?domain=apple.com&sz=128" onerror="this.onerror=null;this.src='https://icons.duckduckgo.com/ip3/apple.com.ico'" alt="Apple logo" loading="lazy" />
+            <span><b>Apple</b><em data-i18n="hof_apple">Responsibly disclosed issue acknowledged</em></span>
+          </a>
+          <a class="hof-chip" href="https://www.who.int/about/cybersecurity/vulnerability-hall-of-fame/ethical-hacker-list" target="_blank" rel="noopener" title="WHO — recognized">
+            <img src="https://www.google.com/s2/favicons?domain=who.int&sz=128" onerror="this.onerror=null;this.src='https://icons.duckduckgo.com/ip3/who.int.ico'" alt="WHO logo" loading="lazy" />
+            <span><b>WHO</b><em data-i18n="hof_who">Recognized for responsible disclosure</em></span>
+          </a>
+          <a class="hof-chip" href="https://unite.un.org/en/un-information-security-hall-fame" target="_blank" rel="noopener" title="United Nations — Hall of Fame">
+            <img src="https://www.google.com/s2/favicons?domain=un.org&sz=128" onerror="this.onerror=null;this.src='https://icons.duckduckgo.com/ip3/un.org.ico'" alt="United Nations logo" loading="lazy" />
+            <span><b>United Nations</b><em data-i18n="hof_un">Hall of Fame</em></span>
+          </a>
+          <a class="hof-chip" href="https://www.klicktipp.com/de/hall-of-fame/" target="_blank" rel="noopener" title="KlickTipp — Hall of Fame">
+            <img src="https://icons.duckduckgo.com/ip3/klicktipp.com.ico" alt="KlickTipp logo" loading="lazy" />
+            <span><b>KlickTipp</b><em data-i18n="hof_kt">Hall of Fame</em></span>
+          </a>
+          <a class="hof-chip" href="https://sweethawk.com/responsible-disclosure" target="_blank" rel="noopener" title="SweetHawk — Hall of Fame">
+            <img src="https://icons.duckduckgo.com/ip3/sweethawk.com.ico" alt="SweetHawk logo" loading="lazy" />
+            <span><b>SweetHawk</b><em data-i18n="hof_sh">Responsible disclosure acknowledged</em></span>
+          </a>
+          <a class="hof-chip" href="https://drive.google.com/file/d/1jR87sA1sDhCnxGlhkSa3lofEGjk2yWFh/view?usp=sharing" target="_blank" rel="noopener" title="Global Recognition — award">
+            <img src="https://icons.duckduckgo.com/ip3/drive.google.com.ico" alt="Global Recognition logo" loading="lazy" />
+            <span><b>Global Recognition</b><em data-i18n="hof_gr">Award &amp; verified recognition</em></span>
+          </a>
+        </div>
+        <div class="logo-row" aria-hidden="true">
+          <a class="hof-chip" href="https://www.zetes.com/en/responsible-disclosure-policy" target="_blank" rel="noopener" title="Zetes — Hall of Fame">
+            <img src="https://icons.duckduckgo.com/ip3/zetes.com.ico" alt="Zetes logo" loading="lazy" />
+            <span><b>Zetes</b><em data-i18n="hof_zetes">Identified a critical issue, guided fast remediation</em></span>
+          </a>
+          <a class="hof-chip" href="https://msrc.microsoft.com/update-guide/acknowledgement/online" target="_blank" rel="noopener" title="Microsoft — Hall of Fame">
+            <img src="https://www.google.com/s2/favicons?domain=microsoft.com&sz=128" onerror="this.onerror=null;this.src='https://icons.duckduckgo.com/ip3/microsoft.com.ico'" alt="Microsoft logo" loading="lazy" />
+            <span><b>Microsoft</b><em data-i18n="hof_ms">Critical vulnerability reported and validated</em></span>
+          </a>
+          <a class="hof-chip" href="https://gbtwente.nl/responsible-disclosure" target="_blank" rel="noopener" title="GBTwente — Hall of Fame">
+            <img src="https://www.google.com/s2/favicons?domain=gbtwente.nl&sz=128" onerror="this.onerror=null;this.src='https://icons.duckduckgo.com/ip3/gbtwente.nl.ico'" alt="GBTwente logo" loading="lazy" />
+            <span><b>GBTwente</b><em data-i18n="hof_gb">Found a vulnerability, guided remediation</em></span>
+          </a>
+          <a class="hof-chip" href="https://support.apple.com/en-us/102774" target="_blank" rel="noopener" title="Apple — Hall of Fame">
+            <img src="https://www.google.com/s2/favicons?domain=apple.com&sz=128" onerror="this.onerror=null;this.src='https://icons.duckduckgo.com/ip3/apple.com.ico'" alt="Apple logo" loading="lazy" />
+            <span><b>Apple</b><em data-i18n="hof_apple">Responsibly protected issue acknowledged</em></span>
+          </a>
+          <a class="hof-chip" href="https://www.who.int/about/cybersecurity/vulnerability-hall-of-fame/ethical-hacker-list" target="_blank" rel="noopener" title="WHO — recognized">
+            <img src="https://www.google.com/s2/favicons?domain=who.int&sz=128" onerror="this.onerror=null;this.src='https://icons.duckduckgo.com/ip3/who.int.ico'" alt="WHO logo" loading="lazy" />
+            <span><b>WHO</b><em data-i18n="hof_who">Recognized for responsible disclosure</em></span>
+          </a>
+          <a class="hof-chip" href="https://unite.un.org/en/un-information-security-hall-fame" target="_blank" rel="noopener" title="United Nations — Hall of Fame">
+            <img src="https://www.google.com/s2/favicons?domain=un.org&sz=128" onerror="this.onerror=null;this.src='https://icons.duckduckgo.com/ip3/un.org.ico'" alt="United Nations logo" loading="lazy" />
+            <span><b>United Nations</b><em data-i18n="hof_un">Hall of Fame</em></span>
+          </a>
+          <a class="hof-chip" href="https://www.klicktipp.com/de/hall-of-fame/" target="_blank" rel="noopener" title="KlickTipp — Hall of Fame">
+            <img src="https://icons.duckduckgo.com/ip3/klicktipp.com.ico" alt="KlickTipp logo" loading="lazy" />
+            <span><b>KlickTipp</b><em data-i18n="hof_kt">Hall of Fame</em></span>
+          </a>
+          <a class="hof-chip" href="https://sweethawk.com/responsible-disclosure" target="_blank" rel="noopener" title="SweetHawk — Hall of Fame">
+            <img src="https://icons.duckduckgo.com/ip3/sweethawk.com.ico" alt="SweetHawk logo" loading="lazy" />
+            <span><b>SweetHawk</b><em data-i18n="hof_sh">Responsible disclosure acknowledged</em></span>
+          </a>
+          <a class="hof-chip" href="https://drive.google.com/file/d/1jR87sA1sDhCnxGlhkSa3lofEGjk2yWFh/view?usp=sharing" target="_blank" rel="noopener" title="Global Recognition — award">
+            <img src="https://icons.duckduckgo.com/ip3/drive.google.com.ico" alt="Global Recognition logo" loading="lazy" />
+            <span><b>Global Recognition</b><em data-i18n="hof_gr">Award &amp; verified recognition</em></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- How it works / Metrics -->
+  <section id="stats">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="eyebrow" data-i18n="stats_eyebrow">How it works</div>
+        <h2 data-i18n="stats_title">Click a stage to see the metrics and what it delivers</h2>
+        <p data-i18n="stats_sub">Every engagement follows the same cycle — define the scope, test it, validate the findings, and confirm the fixes. Select each stage to see its numbers.</p>
+      </div>
+
+      <div class="howit">
+        <div class="phase-list" role="tablist" data-i18n-aria="stages_aria" aria-label="Engagement stages">
+          <button class="phase-btn active" data-phase="scope" role="tab" aria-selected="true">
+            <span class="phase-num">01</span>
+            <span class="phase-txt">
+              <strong data-i18n="ph1_t">Scope &amp; goals</strong>
+              <em data-i18n="ph1_d">Clear scope, rule set and reward for every engagement.</em>
+            </span>
+          </button>
+          <button class="phase-btn" data-phase="launch" role="tab" aria-selected="false">
+            <span class="phase-num">02</span>
+            <span class="phase-txt">
+              <strong data-i18n="ph2_t">Launch</strong>
+              <em data-i18n="ph2_d">Recon and threat-driven testing begin against your defined targets.</em>
+            </span>
+          </button>
+          <button class="phase-btn" data-phase="identify" role="tab" aria-selected="false">
+            <span class="phase-num">03</span>
+            <span class="phase-txt">
+              <strong data-i18n="ph3_t">Identify</strong>
+              <em data-i18n="ph3_d">Findings are validated, deduplicated and prioritized by real business risk.</em>
+            </span>
+          </button>
+          <button class="phase-btn" data-phase="remediate" role="tab" aria-selected="false">
+            <span class="phase-num">04</span>
+            <span class="phase-txt">
+              <strong data-i18n="ph4_t">Remediate</strong>
+              <em data-i18n="ph4_d">Guided fixes with unlimited free retesting until everything is resolved.</em>
+            </span>
+          </button>
+        </div>
+
+        <div class="phase-view">
+          <div class="phase-panel active" id="phase-scope">
+            <h3 data-i18n="pa1_t">Audit activity</h3>
+            <p class="muted" data-i18n="pa1_d">Engagements delivered per year, 2021 — 2025.</p>
+            <div class="chart-box"><canvas id="chartAudits"></canvas></div>
+            <div class="mini-kpis">
+              <div class="mini-kpi"><b>70+</b><span data-i18n="mk1">Audits delivered</span></div>
+              <div class="mini-kpi"><b>10+</b><span data-i18n="mk2">Enterprise clients</span></div>
+              <div class="mini-kpi"><b>24/7</b><span data-i18n="mk3">Support &amp; retesting</span></div>
+            </div>
+          </div>
+          <div class="phase-panel" id="phase-launch">
+            <h3 data-i18n="pa2_t">Service distribution</h3>
+            <p class="muted" data-i18n="pa2_d">Share of work by service line under active testing.</p>
+            <div class="chart-box"><canvas id="chartServices"></canvas></div>
+            <div class="mini-kpis">
+              <div class="mini-kpi"><b>40%</b><span data-i18n="mk4">Penetration testing</span></div>
+              <div class="mini-kpi"><b>22%</b><span data-i18n="mk5">Secure code review</span></div>
+              <div class="mini-kpi"><b>15%</b><span data-i18n="mk6">Vulnerability management</span></div>
+            </div>
+          </div>
+          <div class="phase-panel" id="phase-identify">
+            <h3 data-i18n="pa3_t">Findings by severity</h3>
+            <p class="muted" data-i18n="pa3_d">Distribution across all completed engagements.</p>
+            <div class="chart-box"><canvas id="chartSeverity"></canvas></div>
+            <div class="mini-kpis">
+              <div class="mini-kpi"><b>12</b><span data-i18n="mk7">Critical</span></div>
+              <div class="mini-kpi"><b>34</b><span data-i18n="mk8">High</span></div>
+              <div class="mini-kpi"><b>58</b><span data-i18n="mk9">Medium</span></div>
+              <div class="mini-kpi"><b>41</b><span data-i18n="mk10">Low</span></div>
+            </div>
+          </div>
+          <div class="phase-panel" id="phase-remediate">
+            <h3 data-i18n="pa4_t">Remediation trend</h3>
+            <p class="muted" data-i18n="pa4_d">Vulnerabilities resolved per audit, rolling average.</p>
+            <div class="chart-box"><canvas id="chartTrend"></canvas></div>
+            <div class="mini-kpis">
+              <div class="mini-kpi"><b>98%</b><span data-i18n="mk11">Client success rate</span></div>
+              <div class="mini-kpi"><b>Free</b><span data-i18n="mk12">Unlimited retesting</span></div>
+              <div class="mini-kpi"><b>100%</b><span data-i18n="mk13">Validated fixes</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="eyebrow" data-i18n="services_eyebrow">Services</div>
+        <h2 data-i18n="services_title">Take advantage of every edge</h2>
+        <p data-i18n="si_p">Comprehensive offensive security solutions, ordered by attack surface — from deep testing to continuous management.</p>
+      </div>
+
+      <div class="services-grid rv-stagger">
+        <div class="service">
+          <span class="service-index">01</span>
+          <h3 data-i18n="s1_t">Penetration Testing</h3>
+          <p class="muted" data-i18n="s1_d">Simulate real-world attacks to identify and exploit vulnerabilities before malicious actors do.</p>
+          <div class="price">$300 — $10,000</div>
+          <ul>
+            <li data-i18n="s1_1">Web application testing</li>
+            <li data-i18n="s1_2">Mobile application testing</li>
+            <li data-i18n="s1_3">API security assessment</li>
+            <li data-i18n="s1_4">Network &amp; cloud infrastructure testing</li>
+          </ul>
+          <a class="service-meta" href="#contact" data-i18n="s1_l">Book this service</a>
+        </div>
+
+        <div class="service">
+          <span class="service-index">02</span>
+          <h3 data-i18n="s2_t">Secure Code Review</h3>
+          <p class="muted" data-i18n="s2_d">Comprehensive source-level analysis to identify security flaws before they ship into production.</p>
+          <div class="price">$300 — $10,000</div>
+          <ul>
+            <li data-i18n="s2_1">Manual code analysis</li>
+            <li data-i18n="s2_2">SAST and SCA integration</li>
+            <li data-i18n="s2_3">Secure coding practices</li>
+            <li data-i18n="s2_4">Developer training</li>
+          </ul>
+          <a class="service-meta" href="#contact" data-i18n="s2_l">Book a quote</a>
+        </div>
+
+        <div class="service">
+          <span class="service-index">03</span>
+          <h3 data-i18n="s3_t">Vulnerability Management</h3>
+          <p class="muted" data-i18n="s3_d">Continuous identification, assessment and remediation guidance across your infrastructure.</p>
+          <div class="price">$300 — $10,000</div>
+          <ul>
+            <li data-i18n="s3_1">Vulnerability scanning</li>
+            <li data-i18n="s3_2">Risk prioritization</li>
+            <li data-i18n="s3_3">Remediation guidance</li>
+            <li data-i18n="s3_4">Ongoing monitoring</li>
+          </ul>
+          <a class="service-meta" href="#contact" data-i18n="s3_l">Book a quote</a>
+        </div>
+
+        <div class="service">
+          <span class="service-index">04</span>
+          <h3 data-i18n="s4_t">Training &amp; Mentorship</h3>
+          <p class="muted" data-i18n="s4_d">Personalized guidance across the offensive security stack with practical exercises and feedback.</p>
+          <div class="price">$500 — $5,000</div>
+          <ul>
+            <li data-i18n="s4_1">Hands-on labs: web, mobile, API, network</li>
+            <li data-i18n="s4_2">Career roadmaps and milestones</li>
+            <li data-i18n="s4_3">Real-world project reviews</li>
+            <li data-i18n="s4_4">Interview prep &amp; portfolio coaching</li>
+          </ul>
+          <a class="service-meta" href="#contact" data-i18n="s4_l">Book a session</a>
+        </div>
+
+        <div class="service">
+          <span class="service-index">05</span>
+          <h3 data-i18n="s5_t">Consultation &amp; Advisory</h3>
+          <p class="muted" data-i18n="s5_d">Quick expert advice on strategy, tooling, triage and stakeholder buy-in.</p>
+          <div class="price">$50 / hour</div>
+          <ul>
+            <li data-i18n="s5_1">Strategy and roadmap review</li>
+            <li data-i18n="s5_2">Tooling and architecture advice</li>
+            <li data-i18n="s5_3">Triage of internal findings</li>
+            <li data-i18n="s5_4">Team escalation support</li>
+          </ul>
+          <a class="service-meta" href="https://calendly.com/umanhonlengabriel" target="_blank" rel="noopener" data-i18n="s5_l">Schedule on Calendly</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section id="process">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="eyebrow cyan" data-i18n="process_eyebrow">How it works</div>
+        <h2 data-i18n="process_title">A calm path from scope to remediation</h2>
+        <p data-i18n="prc_p">Every engagement follows the same cycle — define the scope, test it, validate the findings, and confirm the fixes.</p>
+      </div>
+      <div class="process-grid rv-stagger">
+        <div class="process-step">
+          <div class="step-num">01</div>
+          <h3 data-i18n="ph1_t">Scope &amp; goals</h3>
+          <p data-i18n="pr1_d">Clear scope, timelines and rules of engagement defined up front.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">02</div>
+          <h3 data-i18n="ph2_t">Launch</h3>
+          <p data-i18n="pr2_d">Reconnaissance and threat-driven testing begin against defined targets.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">03</div>
+          <h3 data-i18n="ph3_t">Identify</h3>
+          <p data-i18n="pr3_d">Findings are validated, deduplicated and prioritized by real business risk.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">04</div>
+          <h3 data-i18n="ph4_t">Remediate</h3>
+          <p data-i18n="pr4_d">Guided fixes with unlimited free retesting until every finding is resolved.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research -->
+  <section id="research">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="eyebrow" data-i18n="research_eyebrow">Research &amp; publications</div>
+        <h2 data-i18n="research_title">Published analysis on real security pressure points</h2>
+        <p>Peer-reviewed papers and industry press coverage on cybercrime, privacy and AI security.</p>
+      </div>
+      <div class="pub-grid rv-stagger">
+        <div class="pub-card">
+          <span class="pub-tag">Research paper</span>
+          <h3>The Impact of Bitcoin Cybercrime on the Financial System</h3>
+          <p>Analyzing the role of crypto mining and criminological behavioral threats. IRE Journals.</p>
+          <a href="https://www.irejournals.com/paper-details/1706314" target="_blank" rel="noopener">Read the paper</a>
+        </div>
+        <div class="pub-card">
+          <span class="pub-tag">Research paper</span>
+          <h3>Research Paper II</h3>
+          <p>Second peer-reviewed research contribution, IRE Journals.</p>
+          <a href="https://www.irejournals.com/paper-details/1706310" target="_blank" rel="noopener">Read the paper</a>
+        </div>
+        <div class="pub-card">
+          <span class="pub-tag">Press</span>
+          <h3>The privacy implications of accepting website cookies</h3>
+          <p>Businessday NG — Technology. Analysis on consumer data exposure.</p>
+          <a href="https://businessday.ng/technology/article/here-are-privacy-implications-of-accepting-website-cookies/?amp" target="_blank" rel="noopener">Read the article</a>
+        </div>
+        <div class="pub-card">
+          <span class="pub-tag">Press</span>
+          <h3>New NIN-linked credit system sparks promise and concern</h3>
+          <p>Businessday NG — article on identity-linked credit risk in Nigeria.</p>
+          <a href="https://businessday.ng/pro/article/new-nin-linked-credit-system-sparks-promise-concern/?amp" target="_blank" rel="noopener">Read the article</a>
+        </div>
+        <div class="pub-card">
+          <span class="pub-tag">Press</span>
+          <h3>AI integrity at stake as advanced models reshape cybersecurity</h3>
+          <p>Businessday NG — article on offensive and defensive AI capability.</p>
+          <a href="https://businessday.ng/technology/article/ai-integrity-at-stake-as-advanced-models-reshapes-cybersecurity/?amp" target="_blank" rel="noopener">Read the article</a>
+        </div>
+        <div class="pub-card">
+          <span class="pub-tag">Press</span>
+          <h3>Cyberattacks expose the fragility of Nigeria's digital economy</h3>
+          <p>Businessday NG — article on rising threats to digital growth.</p>
+          <a href="https://businessday.ng/technology/article/cyberattacks-expose-the-fragility-of-nigerias-digital-economy-as-businesses-face-rising-risks/?amp" target="_blank" rel="noopener">Read the article</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Recognition / Hall of Fame -->
+  <section id="recognition">
+    <div class="container">
+      <div class="stats-grid" style="margin-top: 48px" data-reveal>
+        <div class="chart-card" style="margin-top: 0">
+          <h3 data-i18n="rc1_t">Professional certifications</h3>
+          <p data-i18n="rc1_d">Verified credentials on Credly — a global open badge platform.</p>
+          <a class="btn btn-ghost" style="margin-top: 8px" href="https://www.credly.com/users/umanhonlen-gabriel" target="_blank" rel="noopener" data-i18n="rc1_b">View on Credly</a>
+        </div>
+        <div class="chart-card" style="margin-top: 0">
+          <h3 data-i18n="rc2_t">Global recognition &amp; award</h3>
+          <p data-i18n="rc2_d">Industry recognition for security research and responsible disclosure work.</p>
+          <a class="btn btn-ghost" style="margin-top: 8px" href="https://drive.google.com/file/d/1jR87sA1sDhCnxGlhkSa3lofEGjk2yWFh/view?usp=sharing" target="_blank" rel="noopener" data-i18n="rc2_p">View recognition</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="eyebrow" data-i18n="faq_eyebrow">FAQ</div>
+        <h2 data-i18n="faq_title">Clear answers for common questions</h2>
+      </div>
+      <div class="faq-list rv-stagger">
+        <div class="faq-item">
+          <button class="faq-q"><span data-i18n="fq1">How practical is the testing?</span> <span class="plus">+</span></button>
+          <div class="faq-a"><p data-i18n="fa1">100% hands-on. Engagements simulate real attack paths against your live environment — no slide decks, no surface-level checks. Every finding includes a working proof of concept.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span data-i18n="fq2">Why hire an independent researcher instead of a security vendor?</span> <span class="plus">+</span></button>
+          <div class="faq-a"><p data-i18n="fa2">Independent consultants work directly with you — no account managers, no ticket queues. You speak to the engineer who found the issue, and retesting is free and unlimited.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span data-i18n="fq3">Do engagements include remediation support?</span> <span class="plus">+</span></button>
+          <div class="faq-a"><p data-i18n="fa3">Yes. Every engagement includes guided remediation and free retesting until all findings are resolved — the retest is validated before you sign off.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span data-i18n="fq4">Can beginners book a mentorship session?</span> <span class="plus">+</span></button>
+          <div class="faq-a"><p data-i18n="fa4">Yes. Mentorship covers hands-on labs across web, mobile, API and network security — with roadmaps, review and interview preparation for any level.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span data-i18n="fq5">How are findings reported?</span> <span class="plus">+</span></button>
+          <div class="faq-a"><p data-i18n="fa5">Findings are documented with severity, impact, reproduction steps and remediation guidance in a clear executive-and-technical report. Full confidentiality is guaranteed.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="eyebrow" data-i18n="contact_eyebrow">Contact</div>
+        <h2 data-i18n="contact_title">Schedule a consultation</h2>
+        <p data-i18n="contact_p">Tell me about your scope on a quick call — I will respond with a quote and a plan within 24 hours.</p>
+      </div>
+      <div class="contact-layout rv-stagger">
+        <div class="form-card consult-card">
+          <h3 data-i18n="contact_h">Book your free 15-minute consultation</h3>
+          <p class="muted" data-i18n="contact_sub">A quick discovery call to understand your scope, stack and timeline — no commitment, no pressure.</p>
+          <div class="consult-actions">
+            <a class="btn btn-accent" href="https://calendly.com/umanhonlengabriel" target="_blank" rel="noopener" data-i18n="contact_book">Book on Calendly</a>
+          </div>
+          <div class="consult-note">
+            <span class="k" data-i18n="contact_rt">Response time</span>
+            <span class="v" data-i18n="contact_rtv">Within 24 hours, Monday–Friday</span>
+          </div>
+        </div>
+        <div class="info-stack">
+          <div class="info-box">
+            <div class="k" data-i18n="contact_follow_k">Follow</div>
+            <div class="social-row">
+              <a class="social-chip" href="https://linkedin.com/in/umanhonlengabriel" target="_blank" rel="noopener" title="LinkedIn">
+                <img src="https://www.google.com/s2/favicons?domain=linkedin.com&sz=128" onerror="this.onerror=null;this.src='https://icons.duckduckgo.com/ip3/linkedin.com.ico'" alt="LinkedIn logo" loading="lazy" />
+                <span>LinkedIn</span>
+              </a>
+              <a class="social-chip" href="https://twitter.com/sudosu01" target="_blank" rel="noopener" title="X">
+                <img src="https://www.google.com/s2/favicons?domain=x.com&sz=128" onerror="this.onerror=null;this.src='https://icons.duckduckgo.com/ip3/x.com.ico'" alt="X logo" loading="lazy" />
+                <span>X</span>
+              </a>
+              <a class="social-chip" href="https://linktr.ee/umanhonlengabriel" target="_blank" rel="noopener" title="Linktree">
+                <img src="https://www.google.com/s2/favicons?domain=linktr.ee&sz=128" onerror="this.onerror=null;this.src='https://icons.duckduckgo.com/ip3/linktr.ee.ico'" alt="Linktree logo" loading="lazy" />
+                <span>Linktree</span>
+              </a>
+            </div>
+          </div>
+          <div class="info-box">
+            <div class="k" data-i18n="contact_community_k">Community</div>
+            <div class="v" data-i18n="contact_community_v">Join the free cybersecurity community — applications always open.</div>
+            <a class="btn btn-ghost" style="margin-top: 12px" href="https://docs.google.com/forms/d/e/1FAIpQLScb7RTHdfrgPcupN3UTH-0vImkQzYGNKav3rhIj6s5LjVeOqQ/viewform" target="_blank" rel="noopener" data-i18n="cj">Join now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <img class="about-photo" src="About.jpeg" alt="Umanhonlen Gabriel">
+        <div class="eyebrow" data-i18n="about_eyebrow">About</div>
+        <h2 data-i18n="about_title">Umanhonlen Gabriel</h2>
+        <p data-i18n="about_sub">Professional penetration testing and offensive security services.</p>
+      </div>
+      <div class="about-grid rv-stagger">
+        <div class="about-text">
+          <p class="lead-line" data-i18n="ab1">
+            I am a cybersecurity professional and security researcher who believes in turning
+            seemingly impossible challenges into reality through strategic thinking, innovation,
+            and collaboration.
+          </p>
+          <p class="muted" data-i18n="ab2">
+            My professional experience spans banking, fraud monitoring, application security,
+            cybersecurity research, governance, risk and compliance, and cybersecurity
+            resilience. I currently work as an independent security researcher and
+            cybersecurity professional, conducting security research, vulnerability assessments,
+            penetration testing, and responsible disclosure engagements. My work focuses on
+            identifying security weaknesses, demonstrating their real-world impact, and helping
+            organizations understand and address risks before they can be exploited.
+          </p>
+          <div class="about-more">
+          <p class="muted" data-i18n="ab3">
+            My professional journey began in the banking sector, where I worked with one of
+            Nigeria's recognized banks as a Fraud Risk Supervisor. In this role, I led a
+            team of 15 professionals responsible for monitoring, investigating, and responding
+            to potentially fraudulent transactions. This experience gave me a strong foundation
+            in fraud detection, risk management, incident handling, operational controls, and
+            team leadership, while also providing valuable insight into the security challenges
+            faced by financial institutions.
+          </p>
+          <p class="muted" data-i18n="ab4">
+            I later progressed into application security as a Senior Application Security
+            Engineer, where I worked across different stages of the application lifecycle,
+            including security testing, pilot stages, and production deployment. I worked
+            closely with developers and technology teams to identify and remediate security
+            vulnerabilities, integrate security into development processes, and strengthen
+            application security controls. My responsibilities also included managing and
+            securing API services, conducting security assessments, supporting remediation
+            efforts, and providing security guidance to development and engineering teams.
+          </p>
+          <p class="muted" data-i18n="ab5">
+            My experience extends beyond technical security into Governance, Risk, and
+            Compliance (GRC). I have contributed to security risk assessments, control
+            implementation, compliance requirements, security governance, and the alignment of
+            technical security practices with organizational risk objectives. I understand the
+            importance of connecting technical security findings with business risk and
+            ensuring that security decisions support broader organizational objectives.
+          </p>
+          <p class="muted" data-i18n="ab6">
+            I have also worked closely with the Chief Information Security Officer (CISO) and
+            senior management on cybersecurity resilience initiatives. This has included
+            preparing and delivering presentations on cybersecurity resilience, security risks,
+            emerging threats, and organizational security priorities. I believe effective
+            cybersecurity requires more than identifying vulnerabilities. It requires
+            communicating risk clearly to decision makers and helping organizations make
+            informed decisions that strengthen their overall security posture and resilience.
+          </p>
+          <p class="muted" data-i18n="ab7">
+            In my current capacity as an independent security researcher, I continue to work
+            with organizations of different sizes, from startups to enterprise platforms,
+            across penetration testing, security research, code review, vulnerability
+            management, and Al governance and responsible disclosure. I approach security from
+            an adversarial perspective, looking beyond what automated scanners can identify. I
+            focus on discovering vulnerabilities that require deeper analysis, demonstrating
+            their practical impact through working exploits where appropriate, and working
+            with organizations to achieve effective and lasting remediation.
+          </p>
+          <p class="muted" data-i18n="ab8">
+            With more than 70 security audits completed and a 98% client success rate, my work
+            is measured by tangible outcomes: vulnerabilities identified, responsibly
+            disclosed, remediated, and verified. Beyond individual engagements, I collaborate
+            with security triage teams through responsible disclosure programs, communicating
+            findings clearly, contributing to severity and impact assessments, and supporting
+            the validation and remediation process. I believe a security report is only as
+            valuable as the improvement it drives.
+          </p>
+          <p class="muted" data-i18n="ab9">
+            My security research has been published in peer-reviewed journals and national
+            press, and my findings have been recognized on public Hall of Fame lists maintained
+            by organizations including Microsoft, Zetes, GBTwente, SweetHawk, and others.
+            These recognitions reflect my commitment to responsible security
+            research and to helping organizations identify and address vulnerabilities before
+            they can be exploited by malicious actors.
+          </p>
+          <p class="muted" data-i18n="ab10">
+            Beyond my professional work and research, I actively contribute to cybersecurity
+            forums and communities through knowledge sharing, technical discussions,
+            research, mentorship, and collaboration. I also manage and lead
+            Cyber Odyssey, a cybersecurity community focused on bringing security
+            professionals, researchers, students, and aspiring practitioners together to
+            learn, collaborate, and grow.
+          </p>
+          <p class="muted" data-i18n="ab11">
+            Through Cyber Odyssey, I facilitate discussions, share practical security knowledge
+            and resources, encourage research and knowledge exchange, and create
+            opportunities for members to develop their technical and professional skills.
+            I am particularly passionate about helping aspiring cybersecurity professionals
+            gain practical experience and access to knowledge that can help them progress in
+            the field.
+          </p>
+          <p class="muted" data-i18n="ab12">
+            I also mentor the next generation of cybersecurity talent through free training,
+            hands-on labs, practical guidance, and community initiatives. I believe
+            cybersecurity becomes stronger when knowledge is shared, experienced professionals
+            support emerging talent, and organizations and individuals work together to build
+            a more resilient digital ecosystem.
+          </p>
+        </div>
+        <button id="aboutMoreBtn" class="post-read" data-i18n="about_more">Read more</button>
+        </div>
+        <div class="about-facts">
+          <div class="about-fact">
+            <span class="n">01</span>
+            <div>
+              <h4 data-i18n="about_r1">Responsible disclosure</h4>
+              <p data-i18n="af1">Acknowledged on public Hall of Fame — Microsoft, Zetes and GBTwente — for reported and guided remediation of real vulnerabilities.</p>
+            </div>
+          </div>
+          <div class="about-fact">
+            <span class="n">02</span>
+            <div>
+              <h4 data-i18n="about_r2">Published research</h4>
+              <p data-i18n="af2">Peer-reviewed papers in IRE Journals and analyses in Businessday NG on cybercrime, privacy and AI security.</p>
+            </div>
+          </div>
+          <div class="about-fact">
+            <span class="n">03</span>
+            <div>
+              <h4 data-i18n="about_r3">Community-first</h4>
+              <p data-i18n="af3">Building a free cybersecurity community and mentoring the next generation of offensive security researchers.</p>
+            </div>
+          </div>
+          <div class="about-fact">
+            <span class="n">04</span>
+            <div>
+              <h4 data-i18n="about_r4">Proven results</h4>
+              <p data-i18n="af4">70+ security audits, a 98% client success rate, and enterprise clients across the world delivered remotely.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials" data-i18n-aria="testi_aria" aria-label="Testimonials">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="eyebrow" data-i18n="testi_eyebrow">Testimonials</div>
+        <h2 data-i18n="testi_title">What clients &amp; students say</h2>
+      </div>
+    </div>
+    <div class="logo-marquee">
+      <div class="logo-track">
+        <div class="logo-row testi-row">
+          <div class="testi-chip">
+            <div class="testi-avatar"><img src="https://www.google.com/s2/favicons?domain=medium.com&sz=128" alt="" loading="lazy" /><span>T</span></div>
+            <div class="testi-body">
+              <b data-i18n="t1_name">Tosin</b>
+              <em data-i18n="t1_role">Mentorship student — bug bounty hunter</em>
+              <p data-i18n="t1_q">I started as a complete beginner in Gabriel's mentorship program. Months later I earned my first real bug bounty — the training was hands-on, practical, and personal.</p>
+            </div>
+          </div>
+          <div class="testi-chip">
+            <div class="testi-avatar"><img src="https://www.google.com/s2/favicons?domain=coolidgesolutions.com&sz=128" onerror="this.onerror=null;this.src='https://icons.duckduckgo.com/ip3/coolidgesolutions.com.ico';" alt="Coolidge Solutions logo" loading="lazy" /><span>CS</span></div>
+            <div class="testi-body">
+              <b data-i18n="t2_name">Coolidge Solutions</b>
+              <em data-i18n="t2_role">Canadian company — penetration testing client</em>
+              <p data-i18n="t2_q">Gabriel found critical vulnerabilities our previous vendor missed. Clear reports, fast retesting, and real business context in every finding.</p>
+            </div>
+          </div>
+          <div class="testi-chip">
+            <div class="testi-avatar"><img src="https://icons.duckduckgo.com/ip3/klicktipp.com.ico" alt="Klick-Tipp logo" loading="lazy" /><span>K</span></div>
+            <div class="testi-body">
+              <b data-i18n="t3_name">Klick-Tipp Security Team</b>
+              <em data-i18n="t3_role">Security team — responsible disclosure response</em>
+              <p data-i18n="t3_q">This is in no way a reflection on the quality of your work. Your report was clear, well-structured and carried out responsibly within the limits of our policy — we appreciate the care you took in documenting it.</p>
+            </div>
+          </div>
+        </div>
+        <div class="logo-row testi-row" aria-hidden="true">
+          <div class="testi-chip">
+            <div class="testi-avatar"><img src="https://www.google.com/s2/favicons?domain=medium.com&sz=128" alt="" loading="lazy" /><span>T</span></div>
+            <div class="testi-body">
+              <b data-i18n="t1_name">Tosin</b>
+              <em data-i18n="t1_role">Mentorship student — bug bounty hunter</em>
+              <p data-i18n="t1_q">I started as a complete beginner in Gabriel's mentorship program. Months later I earned my first real bug bounty — the training was hands-on, practical, and personal.</p>
+            </div>
+          </div>
+          <div class="testi-chip">
+            <div class="testi-avatar"><img src="https://www.google.com/s2/favicons?domain=coolidgesolutions.com&sz=128" onerror="this.onerror=null;this.src='https://icons.duckduckgo.com/ip3/coolidgesolutions.com.ico';" alt="Coolidge Solutions logo" loading="lazy" /><span>CS</span></div>
+            <div class="testi-body">
+              <b data-i18n="t2_name">Coolidge Solutions</b>
+              <em data-i18n="t2_role">Canadian company — penetration testing client</em>
+              <p data-i18n="t2_q">Gabriel found critical vulnerabilities our previous vendor missed. Clear reports, fast retesting, and real business context in every finding.</p>
+            </div>
+          </div>
+          <div class="testi-chip">
+            <div class="testi-avatar"><img src="https://icons.duckduckgo.com/ip3/klicktipp.com.ico" alt="Klick-Tipp logo" loading="lazy" /><span>K</span></div>
+            <div class="testi-body">
+              <b data-i18n="t3_name">Klick-Tipp Security Team</b>
+              <em data-i18n="t3_role">Security team — responsible disclosure response</em>
+              <p data-i18n="t3_q">This is in no way a reflection on the quality of your work. Your report was clear, well-structured and carried out responsibly within the limits of our policy — we appreciate the care you took in documenting it.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <strong data-i18n="foot_pages">Pages</strong>
+          <ul>
+            <li><a href="index.html#hero" data-i18n="nav_home">Home</a></li>
+            <li><a href="index.html#services" data-i18n="nav_services">Services</a></li>
+            <li><a href="index.html#stats" data-i18n="nav_stats">Statistics</a></li>
+            <li><a href="blog.html" data-i18n="nav_blog">Blog</a></li>
+            <li><a href="index.html#contact" data-i18n="nav_contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <strong data-i18n="foot_services">Services</strong>
+          <ul>
+            <li><a href="index.html#services" data-i18n="fs1">Penetration Testing</a></li>
+            <li><a href="index.html#services" data-i18n="fs2">Secure Code Review</a></li>
+            <li><a href="index.html#services" data-i18n="fs3">Vulnerability Management</a></li>
+            <li><a href="index.html#services" data-i18n="fs4">Mentorship</a></li>
+            <li><a href="index.html#services" data-i18n="fs5">Consultation</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <strong data-i18n="foot_legal">Legal</strong>
+          <ul>
+            <li><a href="privacy.html" data-i18n="foot_pp">Privacy Policy</a></li>
+            <li><a href="terms.html" data-i18n="foot_tos">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2025 Umanhonlen Gabriel <span data-i18n="foot_rights">All rights reserved.</span></span>
+        <span data-i18n="foot_tag">Offensive security — responsible disclosure.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  <script>
+    (() => {
+    // ---------- Nav toggle ----------
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.getElementById('navMenu');
+    navToggle.addEventListener('click', () => navMenu.classList.toggle('open'));
+
+    // ---------- FAQ ----------
+    document.querySelectorAll('.faq-q').forEach(q => {
+      q.addEventListener('click', () => {
+        const item = q.parentElement;
+        const a = item.querySelector('.faq-a');
+        const open = a.style.maxHeight && a.style.maxHeight !== '0px';
+        document.querySelectorAll('.faq-item .faq-a').forEach(x => x.style.maxHeight = '0px');
+        if (!open) a.style.maxHeight = a.scrollHeight + 'px';
+      });
+    });
+
+    // ---------- Interactive phases (How it works) ----------
+    const phaseBtns = document.querySelectorAll('.phase-btn');
+    const phasePanels = document.querySelectorAll('.phase-panel');
+    const chartInstances = {};
+    const CH_LABELS = { ch_audits: 'Audits', ch_res: 'Resolved per cycle', ch_pen: 'Penetration', ch_cr: 'Code Review', ch_vm: 'Vuln Mgmt', ch_me: 'Mentorship', ch_co: 'Consulting', ch_find: 'Findings', ch_crit: 'Critical', ch_high: 'High', ch_med: 'Medium', ch_low: 'Low' };
+    const L = key => (window.UGT ? window.UGT(key) : (CH_LABELS[key] || key));
+
+    const chartConfigs = {
+      scope: () => new Chart(document.getElementById('chartAudits'), {
+        type: 'bar',
+        data: {
+          labels: ['2021', '2022', '2023', '2024', '2025'],
+          datasets: [{
+            label: L('ch_audits'),
+            data: [8, 12, 14, 18, 21],
+            backgroundColor: 'rgba(51,194,255,0.75)',
+            borderRadius: 8,
+            barPercentage: 0.55
+          }]
+        },
+        options: {
+          plugins: { legend: { display: false } },
+          scales: {
+            y: { beginAtZero: true, grid: { color: 'rgba(255,255,255,0.06)' } },
+            x: { grid: { display: false } }
+          }
+        }
+      }),
+      launch: () => new Chart(document.getElementById('chartServices'), {
+        type: 'doughnut',
+        data: {
+          labels: [L('ch_pen'), L('ch_cr'), L('ch_vm'), L('ch_me'), L('ch_co')],
+          datasets: [{
+            data: [40, 22, 15, 13, 10],
+            backgroundColor: ['#00ffd9', '#33c2ff', '#613fe9', '#00e1ff', 'rgba(255,255,255,0.3)'],
+            borderWidth: 0
+          }]
+        },
+        options: {
+          cutout: '68%',
+          plugins: {
+            legend: {
+              position: 'bottom',
+              labels: { usePointStyle: true, pointStyle: 'circle', padding: 18 }
+            }
+          }
+        }
+      }),
+      identify: () => new Chart(document.getElementById('chartSeverity'), {
+        type: 'bar',
+        data: {
+          labels: [L('ch_crit'), L('ch_high'), L('ch_med'), L('ch_low')],
+          datasets: [{
+            label: L('ch_find'),
+            data: [12, 34, 58, 41],
+            backgroundColor: ['#ff5470', '#33c2ff', '#00ffd9', 'rgba(255,255,255,0.35)'],
+            borderRadius: 6,
+            barThickness: 42
+          }]
+        },
+        options: {
+          plugins: { legend: { display: false } },
+          scales: {
+            y: { beginAtZero: true, grid: { color: 'rgba(255,255,255,0.06)' } },
+            x: { grid: { display: false } }
+          }
+        }
+      }),
+      remediate: () => new Chart(document.getElementById('chartTrend'), {
+        type: 'line',
+        data: {
+          labels: ['Q1', 'Q2', 'Q3', 'Q4', 'Q1', 'Q2', 'Q3', 'Q4'],
+          datasets: [{
+            label: L('ch_res'),
+            data: [14, 18, 16, 22, 19, 25, 23, 28],
+            borderColor: '#00ffd9',
+            backgroundColor: 'rgba(0,255,217,0.12)',
+            fill: true,
+            tension: 0.4,
+            pointRadius: 3,
+            pointBackgroundColor: '#00ffd9'
+          }]
+        },
+        options: {
+          plugins: { legend: { display: false } },
+          scales: {
+            y: { beginAtZero: true, grid: { color: 'rgba(255,255,255,0.06)' } },
+            x: { grid: { display: false } }
+          }
+        }
+      })
+    };
+
+    phaseBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const name = btn.dataset.phase;
+        phaseBtns.forEach(b => {
+          const active = b === btn;
+          b.classList.toggle('active', active);
+          b.setAttribute('aria-selected', active ? 'true' : 'false');
+        });
+        phasePanels.forEach(p => p.classList.toggle('active', p.id === 'phase-' + name));
+        if (chartConfigs[name] && !chartInstances['phase-' + name]) {
+          chartInstances['phase-' + name] = chartConfigs[name]();
+        }
+      });
+    });
+
+    // Charts (defaults + tabbed setup)
+    Chart.defaults.color = 'rgba(255,255,255,0.6)';
+    Chart.defaults.font.family = 'Inter, sans-serif';
+    Chart.defaults.font.size = 12;
+    Chart.defaults.borderColor = 'rgba(255,255,255,0.08)';
+
+    // Render the initially visible chart (Scope & goals)
+    document.addEventListener('DOMContentLoaded', () => {
+      if (!chartInstances['phase-scope']) chartInstances['phase-scope'] = chartConfigs.scope();
+    });
+
+    // About — show more
+    const aboutText = document.querySelector('.about-text');
+    const aboutMoreBtn = document.getElementById('aboutMoreBtn');
+    aboutMoreBtn.addEventListener('click', () => {
+      const open = aboutText.classList.toggle('open');
+      aboutMoreBtn.textContent = open ? L('about_less') : L('about_more');
+    });
+
+    // ---------- Copy protection ----------
+    ['contextmenu', 'copy', 'cut', 'selectstart', 'dragstart'].forEach(evt =>
+      document.addEventListener(evt, e => e.preventDefault())
+    );
+      // ---------- Language switch: re-render charts & buttons ----------
+    window.__onIntLangChange = () => {
+      Object.keys(chartInstances).forEach(k => { try { chartInstances[k].destroy(); } catch (e) {} delete chartInstances[k]; });
+      const active = document.querySelector('.phase-btn.active');
+      if (active && chartConfigs[active.dataset.phase]) {
+        chartInstances['phase-' + active.dataset.phase] = chartConfigs[active.dataset.phase]();
+      }
+      if (aboutMoreBtn) aboutMoreBtn.textContent = aboutText.classList.contains('open') ? L('about_less') : L('about_more');
+    };
+  })();
+  </script>
+  <script src="js/i18n.js"></script>
+  <script src="js/guard.js"></script>
+  <script src="js/dynamic.js"></script>
+</body>
+</html>
